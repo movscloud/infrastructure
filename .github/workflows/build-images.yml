@@ -11,7 +11,7 @@ jobs:
   build-php-webengine:
     runs-on: ubuntu-latest
     permissions:
-      content: read
+      contents: read
       packages: write
 
     steps:
@@ -21,7 +21,7 @@ jobs:
       - name: Log in to the Container registry
         uses: docker/login-action@v3
         with:
-          registry: ${{ env:REGISTRY }}
+          registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
