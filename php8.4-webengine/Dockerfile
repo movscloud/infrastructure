@@ -17,6 +17,7 @@ RUN cat <<'EOF' > /etc/apache2/conf-available/allow-htaccess.conf
     AllowOverride All
     Require all granted
 </Directory>
+EOF
 
 RUN a2enconf allow-htaccess
 RUN a2enmod rewrite
